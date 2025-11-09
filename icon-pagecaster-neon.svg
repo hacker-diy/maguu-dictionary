@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <filter id="neon" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="0" stdDeviation="7"  flood-color="#3aa0ff" flood-opacity="0.9"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="14" flood-color="#49b1ff" flood-opacity="0.7"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="24" flood-color="#7bd0ff" flood-opacity="0.5"/>
+    </filter>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.2" result="b"/>
+      <feOffset dy="0.5" in="b" result="o"/>
+      <feMerge><feMergeNode in="o"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect x="16" y="16" width="480" height="480" rx="100" ry="100" fill="#000"/>
+  <rect x="26" y="26" width="460" height="460" rx="92" ry="92" fill="none" stroke="#a8dcff" stroke-width="3.5" filter="url(#neon)"/>
+  <g fill="#fff" text-anchor="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif" filter="url(#soft)">
+    <text x="256" y="220" font-size="78" font-weight="800" letter-spacing="1.5">PageCaster</text>
+  </g>
+  <g fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" filter="url(#soft)">
+    <path d="M120 340 C170 320, 210 320, 256 340" />
+    <path d="M256 340 C302 320, 342 320, 392 340" />
+    <path d="M120 340 Q120 300 120 270 Q170 250 220 265" />
+    <path d="M392 340 Q392 300 392 270 Q342 250 292 265" />
+    <path d="M256 300 L256 380"/>
+    <path d="M220 265 Q238 272 256 280 Q274 272 292 265" />
+  </g>
+</svg>
